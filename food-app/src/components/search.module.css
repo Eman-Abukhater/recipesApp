@@ -9,9 +9,12 @@
     width: 100%;
     padding: 10px 20px;
     border: none;
-    border-bottom: 1px solid #e3e4dc;
+    border-bottom: 2px solid #ccc;
     border-radius: 3px;
     outline: none;
     font-size: 16px;
+    box-shadow: 0px 0px 5px rgb(111, 111, 112);
+
+
     
 }
