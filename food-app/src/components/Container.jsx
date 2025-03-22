@@ -1,8 +1,8 @@
 import React from 'react'
-
-function Container() {
+import styles from './container.module.css'
+function Container({children}) {
   return (
-    <div>Container</div>
+    <div className={styles.parentContainer}>{children}</div>
   )
 }
 
