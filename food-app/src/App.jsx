@@ -1,12 +1,19 @@
-import React from 'react'
-import Search from './components/Search'
+import React, { useState } from "react";
+import Search from "./components/Search";
+import FoodList from "./components/FoodList";
+import Nav from "./components/Nav";
+import "./App.css";
 
 function App() {
+  const [foodData, setFoodData] = useState([]);
   return (
     <div className="App">
-      <Search />
+      <Nav />
+      <Search foodData={foodData} setFoodData={setFoodData} />
+      <FoodList foodData={foodData} />
+  
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
