@@ -11,6 +11,7 @@ function Search() {
             console.log(`Search query`);
         } 
         demo(); // call the function
+        //we want to execute the function whatever the application changes
        
     }) // run this effect every time the query changes
 
