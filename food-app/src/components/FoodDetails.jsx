@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import styles from "./fooddetails.module.css";
+import ItemList from "./ItemList";
 function FoodDetails({ foodId }) {
   const [food, setFood] = useState({});
   const [loading, setLoading] = useState(true);
@@ -33,21 +34,8 @@ function FoodDetails({ foodId }) {
         <div>
           <span>💲 {food.pricePerServing / 100}</span>
         </div>
-        <h3> Ingredients</h3>
-        {food.extendedIngredients && food.extendedIngredients.map((item) => (
-          <div key={item.id}>
-            <img
-              src={
-                `https://api.spoonacular.com/cdn/ingredients_100x100/` +
-                item.image
-              }
-              alt={item.name}
-            />
-            <h3>{item.name}</h3>
-            <p>{item.amount} {item.unit}</p>
-          </div>
-        ))}
-
+        <ItemList food={food} loading={loading} />
+ 
         <h3>📋 Instructions</h3>
         <div className={styles.recipeInstructions}>
           <ol>
